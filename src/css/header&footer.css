@@ -169,7 +169,7 @@ footer .social-media ul{
 
 
 /* Mobile display */
-@media (max-width: 440px) {
+@media (max-width: 465px) {
     /* Header */
     header nav ul{
         display: none;

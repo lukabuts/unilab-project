@@ -19,7 +19,7 @@ body {
 .container {
     display: flex;
     flex-wrap: wrap;
-    margin: 80px auto;
+    margin: 80px 0;
     justify-content: center;
 }
 
@@ -100,4 +100,26 @@ body {
 
 .container .error button:hover{
     background-color: #222222;
+}
+
+@media (max-width: 465px) {
+    /* Error Msg */
+    .container .error h1{
+        margin: 10px 0;
+        font-size: 20px;
+    }
+
+    .container .error button{
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+    
+    .container img{
+        width: 100px;
+    }
+
+    /* Loading */
+    .container .loading img{
+        width: 50px;
+    }
 }

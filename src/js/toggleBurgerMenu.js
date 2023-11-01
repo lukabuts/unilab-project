@@ -1,11 +1,21 @@
 const burgerBtn = document.getElementById('burger-btn');
-
+const mobileNavbar = document.getElementById('mobile-navbar');
+const closer = document.getElementById('closer');
+const exitBtn = document.getElementById('exitBtn');
 
 burgerBtn.addEventListener('click', function(){
-    const footer = document.getElementById('footer');
-    const header = document.getElementById('header')
-    footer.classList.toggle("active");
-    header.classList.toggle("active");
-    console.log(header);
-    console.log(footer);
+    mobileNavbar.classList.add("active");
+    closer.classList.add("active");
 })
+
+/* function triggers */
+closer.addEventListener('click', exitNavbar);
+exitBtn.addEventListener('click', exitNavbar);
+window.addEventListener('resize', () => {
+    if(window.innerWidth >= 465) exitNavbar();
+})
+ /* Exiting mobile-nav menu */
+ function exitNavbar(){
+    mobileNavbar.classList.remove("active");
+    closer.classList.remove("active");
+}

@@ -29,6 +29,10 @@ header{
     z-index: 99;
 }
 
+.burger-btn{
+    display: none;
+}
+
 header .logo{
     font-size: 13px;
     font-weight: bold;
@@ -84,7 +88,7 @@ footer{
     justify-content: space-between;
     gap: 50px;
     background-color: #A6ADB4 ;
-    padding: 57px 60px ;
+    padding: 60px;
     width: 100%;
 }
 
@@ -108,7 +112,13 @@ footer .footer-nav .logo{
     font-weight: bold;
 }
 
-footer .footer-nav .list li a{
+footer .footer-nav .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+
+footer .footer-nav .links .list li a{
     color: var(--primary-footer-color);
     font-family: var(--font-family-helvetica);
     font-size: 13px;
@@ -155,4 +165,35 @@ footer .subscribe-div p{
 footer .social-media ul{
     display: flex;
     gap: 32px;
+}
+
+
+/* Mobile display */
+@media (max-width: 440px) {
+    /* Header */
+    header nav ul{
+        display: none;
+    }
+    header .logo{
+        color: #A6ADB4;
+    }
+
+    /* Burger btn */
+    .burger-btn{
+        display: block;
+    }
+
+    .burger-btn button{
+        border: none;
+        background-color: transparent;
+        -webkit-tap-highlight-color: transparent;
+        width: 16px;
+        height: 14px;
+        cursor: pointer;
+    }
+
+    /* Footer */
+    footer{
+        display: none;
+    }
 }

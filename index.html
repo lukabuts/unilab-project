@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unilab - Front End ( HTML, CSS, JavaScript) 2023.2</title>
+    <!-- general -->
+    <link rel="stylesheet" href="src/css/style.css">
     <!-- Scrollbar -->
     <link rel="stylesheet" href="src/css/scrollbar.css">
     <!-- header&footer -->
     <link rel="stylesheet" href="src/css/header&footer.css">
-    <!-- general -->
-    <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
     <!-- header -->
-    <header>
+    <header id="header" class="active">
+        <div class="burger-btn" id="burger-btn">
+            <button id="burger-toggle">
+              <img src="images/menu-icon.svg" alt="">
+            </button>
+          </div>
         <div class="logo uppercase">logo</div>
         <nav>
             <ul>
@@ -26,54 +31,60 @@
         </nav>
     </header>
 
-    
+
+
+
+
+
 
     <!-- Footer -->
-    <footer id="footer">
+    <footer id="footer" class="active">
         <div class="footer-nav">
             <div class="logo uppercase">Logo</div>
-            <ul class="list">
-                <li> 
-                    <a href="#">Home</a>
-                </li>
-                <li> 
-                    <a href="#">Discovery</a>
-                </li>
-                <li> 
-                    <a href="#">Photos</a>
-                </li>
-                <li> 
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-            <ul class="list">
-                <li> 
-                    <a href="#">about</a>
-                </li>
-                <li> 
-                    <a href="#">help</a>
-                </li>
-                <li> 
-                    <a href="#">terms</a>
-                </li>
-                <li> 
-                    <a href="#">guidlines</a>
-                </li>
-            </ul>
-            <ul class="list">
-                <li> 
-                    <a href="#">testimonials</a>
-                </li>
-                <li> 
-                    <a href="#">advertise</a>
-                </li>
-                <li> 
-                    <a href="#">integration</a>
-                </li>
-                <li> 
-                    <a href="#">careers</a>
-                </li>
-            </ul>
+            <div class="links">
+                <ul class="list">
+                    <li> 
+                        <a href="#">Home</a>
+                     </li>
+                    <li> 
+                        <a href="#">Discovery</a>
+                     </li>
+                    <li> 
+                        <a href="#">Photos</a>
+                     </li>
+                    <li> 
+                        <a href="#">Contact</a>
+                     </li>
+                </ul>
+                <ul class="list">
+                    <li> 
+                        <a href="#">about</a>
+                     </li>
+                    <li> 
+                        <a href="#">help</a>
+                     </li>
+                    <li> 
+                        <a href="#">terms</a>
+                     </li>
+                    <li> 
+                        <a href="#">guidlines</a>
+                     </li>
+                </ul>
+                <ul class="list">
+                    <li> 
+                        <a href="#">testimonials</a>
+                     </li>
+                    <li> 
+                        <a href="#">advertise</a>
+                     </li>
+                    <li> 
+                        <a href="#">integration</a>
+                     </li>
+                    <li> 
+                        <a href="#">careers</a>
+                     </li>
+                </ul>
+            </div>
         </div>
 
         <div class="subscribe-div">
@@ -111,5 +122,6 @@
     </footer>
 
     <script src="src/js/main.js"></script>
+    <script src="src/js/toggleBurgerMenu.js"></script>
 </body>
 </html>

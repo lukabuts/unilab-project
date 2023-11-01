@@ -1,0 +1,21 @@
+/* Styling scrollbar here */
+html{
+    scrollbar-color: #555 #f1f1f1;
+    scrollbar-width: thin;
+  }
+  
+  html::-webkit-scrollbar {
+      width: 12px;
+  }
+  
+  html::-webkit-scrollbar-track {
+      background: #f1f1f1;
+  }
+          
+  html::-webkit-scrollbar-thumb {
+      background: #888;
+  }
+  
+  html::-webkit-scrollbar-thumb:hover{
+      background: #555;
+  }

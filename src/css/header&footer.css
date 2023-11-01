@@ -1,0 +1,158 @@
+/* Styling header */
+:root{
+    --primary-footer-color: #CBD0D3;
+    --font: Arial, Helvetica, sans-serif;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    padding: 0 20px;
+    height: 50px;
+    background-color:#F6F8F9;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+header .logo{
+    font-size: 13px;
+    font-weight: bold;
+    font-family: var(--font-family-helvetica);
+    color: #FA6980;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+header nav ul{
+    display: flex;
+    gap: 22px;
+}
+
+header nav ul li a{
+    color: #343638;
+    font-size: 11px;
+    font-family: var(--font-family-helvetica);
+}
+
+header nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #FA6980;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+header nav ul li a.active{
+    font-weight: bold;
+}
+
+header nav img{
+    cursor: pointer;
+}
+
+/* Styling footer */
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+    background-color: #A6ADB4 ;
+    padding: 57px 60px ;
+    width: 100%;
+}
+
+footer.fixedBottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Footer nav section */
+footer .footer-nav{
+    display: flex;
+    gap: 45px;
+}
+
+footer .footer-nav .logo{
+    font-family: sans-serif;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+footer .footer-nav .list li a{
+    color: var(--primary-footer-color);
+    font-family: var(--font-family-helvetica);
+    font-size: 13px;
+    font-weight: bold;
+}
+/* Footer email subscribe section */
+footer .subscribe-div .email-div{
+    position: relative;
+}
+
+footer .subscribe-div .email-div .email-inp{
+    border: none;
+    background: none;
+    width: 262px;
+    height: 40px;
+    border: 2px solid var(--primary-footer-color);
+    border-radius: 5px;
+    padding: 0 20px;
+    font-family: var(--font-family-helvetica);
+    font-size: 13px;
+    color: var(--primary-footer-color);
+}
+
+footer .subscribe-div .email-div .email-inp:focus{
+    outline: none;
+}
+
+footer .subscribe-div .email-div img{
+    position: absolute;
+    height: 16px;
+    top: 12px;
+    right: 19px;
+    cursor: pointer;
+}
+
+footer .subscribe-div p{
+    margin-top: 16px;
+    color: var(--primary-footer-color);
+    font-family: var(--font-family-helvetica);
+    font-size: 11px;
+}
+
+/* Footer Social Media Section */
+footer .social-media ul{
+    display: flex;
+    gap: 32px;
+}

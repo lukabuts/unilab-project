@@ -1,0 +1,13 @@
+/* General styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* As there are so many elements with uppercase text, in order to avoid repeating the same line of code, it is better to use class for them  */
+.uppercase{
+    text-transform: uppercase;
+}
+
+

@@ -14,13 +14,16 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
 </head>
 <body>
+
     <!-- Header -->
     <header id="header">
-        <div class="burger-btn" id="burger-btn">
-            <button id="burger-toggle">
-              <img src="images/menu-icon.svg" alt="">
+        <div class="exit-btn">
+            <button>
+              <a href="index.html">
+                <img src="images/Arrow Back.svg" alt="go back">
+              </a>
             </button>
-          </div>
+        </div>
         <div class="logo uppercase">logo</div>
         <nav>
             <ul>
@@ -30,104 +33,9 @@
                 <li><a class="uppercase" href="#">contact</a></li>
             </ul>
             <img src="images/user.svg" alt="user" id="user-img">
+            <img src="images/filter.svg" alt="filter" class="filter-btn">
         </nav>
     </header>
-
-    <!-- Mobile Navbar -->
-    <div id="mobile-navbar">
-        <div class="header-section">
-            <div class="logo-close-btn">
-                <div class="logo uppercase">logo</div>
-                <button id="exitBtn">
-                    <i class="bi bi-x-lg"></i>
-                </button>
-            </div>
-            <div class="links">
-                <ul>
-                    <li>
-                        <img src="images/home.svg" alt="">
-                        <a href="index.html" class="uppercase">home</a>
-                    </li>
-                    <li>
-                        <img src="images/discover.svg" alt="">
-                        <a href="" class="uppercase">discovery</a>
-                    </li>
-                    <li class="active">
-                        <img src="images/photos.svg" alt="">
-                        <a href="photos.html" class="uppercase active">photos</a>
-                    </li>
-                    <li>
-                        <img src="images/mail.svg" alt="">
-                        <a href="" class="uppercase">contact</a>
-                    </li>
-                    <li>
-                        <img src="images/user.svg" alt="">
-                        <a href="#" class="uppercase">profile</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="footer-section">
-            <div class="links">
-                <ul>
-                    <li>
-                        <a href="#">about</a>
-                    </li>
-                    <li>
-                        <a href="#">help</a>
-                    </li>
-                    <li>
-                        <a href="#">terms</a>
-                    </li>
-                    <li>
-                        <a href="#">guidlines</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="#">testimonials</a>
-                    </li>
-                    <li>
-                        <a href="#">advertise</a>
-                    </li>
-                    <li>
-                        <a href="#">integrations</a>
-                    </li>
-                    <li>
-                        <a href="#">careers</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="social-media">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="images/instagram.svg" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="images/twitter.svg" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="images/facebook.svg" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="images/web.svg" alt="">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- mobile navbar closer -->
-    <div id="closer"></div>
     
     <!-- Container -->
     <div class="container">
@@ -223,6 +131,5 @@
 
 
     <script src="src/js/photos.js"></script>
-    <script src="src/js/toggleBurgerMenu.js"></script>
 </body>
 </html>

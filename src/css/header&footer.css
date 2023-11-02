@@ -38,9 +38,12 @@ header{
     z-index: 99;
 }
 
-.burger-btn{
+/* Buttons that don't appear on big screen */
+.burger-btn, .exit-btn, .filter-btn{
     display: none;
 }
+
+
 
 .logo{
     font-size: 13px;
@@ -90,7 +93,6 @@ header nav img{
 }
 
 /* Styling footer */
-
 footer{
     display: flex;
     flex-wrap: wrap;
@@ -211,7 +213,7 @@ footer .social-media ul{
     z-index: 999;
 
 }
-    /* header section */
+    /* Mobile Navbar header section */
 
 #mobile-navbar.active .header-section{
     display: flex;
@@ -256,7 +258,7 @@ footer .social-media ul{
 }
 
 
-    /* footer section */
+    /* Mobile Navbar footer section */
 #mobile-navbar.active .footer-section{
     display: flex;
     background-color: var(--footer-background-color);
@@ -269,7 +271,7 @@ footer .social-media ul{
 #mobile-navbar.active .footer-section .links{
     display: flex;
     justify-content: space-between;
-}
+}  
 
 #mobile-navbar.active .footer-section .links ul{
     display: flex;
@@ -292,30 +294,27 @@ footer .social-media ul{
 
 /* Mobile display */
 @media (max-width: 465px) {
-    /* Header */
-    header nav ul{
+    /* Header, Footer, logo, user-img */
+    header nav ul, header .logo, footer, #user-img{
         display: none;
     }
-    header .logo{
+
+    header .logo.active{
+        display: block;
         color: #A6ADB4;
     }
 
-    /* Burger btn */
-    .burger-btn{
+    /* Burger btn, exit-btn, user-img.active filter-btn */
+    .burger-btn, .exit-btn, #user-img.active, .filter-btn{
         display: block;
     }
 
-    .burger-btn button{
+    .burger-btn button, .exit-btn button{
         border: none;
         background-color: transparent;
         -webkit-tap-highlight-color: transparent;
         width: 16px;
         height: 14px;
         cursor: pointer;
-    }
-
-    /* Footer */
-    footer{
-        display: none;
     }
 }

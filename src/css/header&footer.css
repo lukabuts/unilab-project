@@ -39,8 +39,8 @@ header{
     z-index: 99;
 }
 
-/* Buttons that don't appear on big screen */
-.burger-btn, .exit-btn, .filter-btn{
+/* Buttons that don't appear by default */
+.burger-btn, .exit-btn, .filter-btn, #user-info{
     display: none;
 }
 
@@ -87,8 +87,31 @@ header nav ul li a.active{
     font-weight: bold;
 }
 
-header nav img{
+header nav .user-img-div{
+    position: relative;
+}
+
+header nav .user-img-div img{
     cursor: pointer;
+}
+
+header nav .user-img-div #user-info.active{
+    position: absolute;
+    bottom: -267.5px;
+    left: -213px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 0 10px 2px rgb(111, 111, 111);
+    border-radius:  10px 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header nav .user-img-div #user-info.active span{
+    font-weight: bold;
 }
 
 /* Styling footer */

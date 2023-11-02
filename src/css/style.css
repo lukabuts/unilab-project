@@ -88,7 +88,7 @@ body{
     padding: 40px 25px;
 }
 
-.news .more-news .title-button{
+.news .more-news .more-news-container .title-button{
     padding-bottom: 40px;
     margin-bottom: 40px;
     border-bottom: 2px solid #EBEDED;
@@ -97,38 +97,38 @@ body{
     justify-content: space-between;
 }
 
-.news .more-news .title-button .buttons{
+.news .more-news .more-news-container .title-button .buttons{
     display: flex;
     gap: 40px;
 }
 
 
-.news .more-news .articles{
+.news .more-news .more-news-container .articles{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 40px;
 }
 
-.news .more-news .articles .article h3, 
-.news .more-news .articles .article h4{
+.news .more-news .more-news-container .articles .article h3, 
+.news .more-news .more-news-container .articles .article h4{
     font-family: var(--font-family-helvetica);
     font-size: 16px;
     font-weight: bold;
 }
 
-.news .more-news .articles .article h3{
+.news .more-news .more-news-container .articles .article h3{
     color: var(--pink-text-color);
     margin-bottom: 20px;
 }
 
-.news .more-news .articles .article p,
-.news .more-news .articles .article .time span{
+.news .more-news .more-news-container .articles .article p,
+.news .more-news .more-news-container .articles .article .time span{
     color: var(--description-text-color);
     margin: 10px 0;
 }
 
-.news .more-news .articles .article .time{
+.news .more-news .more-news-container .articles .article .time{
     display: flex;
     align-items: center;
     gap: 10px;

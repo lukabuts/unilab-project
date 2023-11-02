@@ -35,7 +35,7 @@ function generateCard(data) {
             <div class="user-picture">${user.userId}</div>
             <h3 class="title">${user.title}</h3>
             <p class="description">${user.body}</p>
-            <p class="user-id">User Id: ${user.userId}</p>
+            <p class="special-id">Special Id: ${user.id}</p>
         </div>
         `;
     }).join('');

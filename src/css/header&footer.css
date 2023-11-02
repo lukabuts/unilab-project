@@ -199,18 +199,18 @@ footer .social-media ul{
     flex-direction: column;
     height: 100%;
     width: 85%;
-    left: -400px;
+    left: -3000px;
     top: 0;
     z-index: 999;
 
-    transition: .5s ease-in-out;
+    transition: .5s;
 }
 
 /* Mobile Navbar */
 #mobile-navbar.active{ 
     left: 0;
     box-shadow:5px 0px 20px rgba(0, 0, 0, 0.6);
-    transition: .5s ease-in-out;
+    transition: .5s;
 }
 
 

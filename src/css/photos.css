@@ -103,6 +103,9 @@ body {
 }
 
 @media (max-width: 465px) {
+    #user-info{
+        display: none !important;
+    }
     /* Error Msg */
     .container .error h1{
         margin: 10px 0;

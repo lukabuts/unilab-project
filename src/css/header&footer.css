@@ -93,6 +93,7 @@ header nav .user-img-div{
 
 header nav .user-img-div img{
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 header nav .user-img-div #user-info.active{

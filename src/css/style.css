@@ -133,3 +133,15 @@ body{
     align-items: center;
     gap: 10px;
 }
+
+@media (max-width: 375px) {
+    .news .world-news .world-news-container,
+    .news .more-news .more-news-container{
+        min-width: 260px
+    }
+
+    .news .world-news, .news .more-news{
+        padding: 40px 0;
+    }
+
+}

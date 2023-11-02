@@ -242,7 +242,7 @@ footer .social-media ul{
     gap: 40px;
 }
 
-#mobile-navbar.active .header-section .links ul li{
+#mobile-navbar.active .header-section .links ul li a{
     display: flex;
     align-items: center;
     gap: 30px;
@@ -252,7 +252,7 @@ footer .social-media ul{
     font-weight: bold;
 }
 
-#mobile-navbar.active .header-section .links ul li img{
+#mobile-navbar.active .header-section .links ul li a img{
     width: 16px;
     height: 16px;
 }

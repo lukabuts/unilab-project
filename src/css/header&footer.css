@@ -1,7 +1,7 @@
 /* Styling header */
 :root{
     --primary-footer-color: #CBD0D3;
-    --font: Arial, Helvetica, sans-serif;
+    --font-family-helvetica: Arial, Helvetica, sans-serif;
     --footer-background-color: #A6ADB4;
 }
 
@@ -31,8 +31,8 @@ header{
     align-items: center ;
     padding: 0 20px;
     height: 50px;
-    background-color:#F6F8F9;
-    position: fixed;
+    position: sticky;
+    background-color: #f6f8f9;
     top: 0;
     width: 100%;
     z-index: 99;

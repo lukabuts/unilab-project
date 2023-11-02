@@ -7,9 +7,126 @@
     box-sizing: border-box;
 }
 
+:root{
+    --body-background-color: #F6F8F9;
+    --pink-text-color: #FA6980; 
+    --description-text-color: #A6ADB4;
+    --font-family-helvetica: Arial, Helvetica, sans-serif;
+
+}
+
+body{
+    background-color: var(--body-background-color);
+}
+
 /* As there are so many elements with uppercase text, in order to avoid repeating the same line of code, it is better to use class for them  */
 .uppercase{
     text-transform: uppercase;
 }
 
 
+
+/* News */
+.news{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+    /* Worls News */
+.news .world-news{
+    background:  url(../../images/worldNews.svg) center/cover no-repeat;
+    display: flex;
+    flex: 1.5;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    color: white;
+}
+
+.news .world-news .world-news-container{
+    width: 70%;
+    min-width: 310px
+}
+
+.news .world-news .world-news-container h1{
+    font-family: var(--font-family-helvetica);
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 40px;
+    border-bottom: 2px solid white;
+    margin-bottom: 40px;
+}
+
+.news .world-news .world-news-container h3{
+    font-family: var(--font-family-helvetica);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news .world-news .world-news-container p{
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.news .world-news .world-news-container button{
+    padding: 16px 30px;
+    font-size: 11px;
+    font-weight: bold;
+    background-color:#FA6980;
+    color: white;
+    border-radius: 6px;
+}
+
+    /* More News */
+.news .more-news{
+    flex: 1;
+    padding: 50px;
+    min-width: 310px
+}
+
+.news .more-news .title-button{
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #EBEDED;
+    font-family: var(--font-family-helvetica);
+    display: flex;
+    justify-content: space-between;
+}
+
+.news .more-news .title-button .buttons{
+    display: flex;
+    gap: 40px;
+}
+
+
+.news .more-news .articles{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.news .more-news .articles .article h3, 
+.news .more-news .articles .article h4{
+    font-family: var(--font-family-helvetica);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.news .more-news .articles .article h3{
+    color: var(--pink-text-color);
+    margin-bottom: 20px;
+}
+
+.news .more-news .articles .article p,
+.news .more-news .articles .article .time span{
+    color: var(--description-text-color);
+    margin: 10px 0;
+}
+
+.news .more-news .articles .article .time{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

@@ -39,13 +39,14 @@ body{
     flex: 1.5;
     align-items: center;
     justify-content: center;
-    padding: 80px 20px;
+    padding: 80px 25px;
     color: white;
 }
 
-.news .world-news .world-news-container{
-    width: 70%;
-    min-width: 310px
+.news .world-news .world-news-container,
+.news .more-news .more-news-container{
+    width: 85%;
+    min-width: 300px
 }
 
 .news .world-news .world-news-container h1{
@@ -81,8 +82,10 @@ body{
     /* More News */
 .news .more-news{
     flex: 1;
-    padding: 50px;
-    min-width: 310px
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 25px;
 }
 
 .news .more-news .title-button{

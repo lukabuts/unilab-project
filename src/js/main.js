@@ -3,38 +3,42 @@ const nextNewsBtn = document.getElementById('next-news-btn');
 const previousNewsBtn = document.getElementById('previous-news-btn');
 
 const newsInfo = [
-    [{
-        title: "travel",
-        subtitle: "Subtitle",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus.",
-    },
-    {
-        title: "Technology",
-        subtitle: "Subtitle",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus.",
-    }],
-
-    [{
-        title: "Coding",
-        subtitle: "Subtitle",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus.",
-    },
-    {
-        title: "Science",
-        subtitle: "Subtitle",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus.",
-    }],
-
-    [{
-        title: "Playing",
-        subtitle: "Subtitle",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus.",
-    },
-    {
-        title: "Reading",
-        subtitle: "Subtitle",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus.",
-    }],
+    [
+        {
+          title: "Travel",
+          subtitle: "Explore the World",
+          description: "Embark on exciting adventures to far-off lands, experience new cultures, and create unforgettable memories.",
+        },
+        {
+          title: "Food",
+          subtitle: "Culinary Delights",
+          description: "Savor delicious dishes from around the world, from street food to gourmet cuisine, and become a culinary connoisseur.",
+        },
+      ],
+      [
+        {
+          title: "Technology",
+          subtitle: "Innovative Tech Trends",
+          description: "Stay up-to-date with the latest technological advancements and explore the future of gadgets and software.",
+        },
+        {
+          title: "Science",
+          subtitle: "Discover the Universe",
+          description: "Dive into the mysteries of the cosmos, learn about groundbreaking scientific discoveries, and unravel the secrets of our world.",
+        },
+      ],
+      [
+        {
+          title: "Coding",
+          subtitle: "Master Programming",
+          description: "Unlock the power of coding, build amazing software, and turn your ideas into functional applications.",
+        },
+        {
+          title: "Art & Creativity",
+          subtitle: "Express Yourself",
+          description: "Nurture your creative side, explore various art forms, and let your imagination run wild with colors and shapes.",
+        },
+      ],
 ]
 
 let count = 0;

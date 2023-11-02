@@ -308,13 +308,4 @@ footer .social-media ul{
     .burger-btn, .exit-btn, #user-img.active, .filter-btn{
         display: block;
     }
-
-    .burger-btn button, .exit-btn button{
-        border: none;
-        background-color: transparent;
-        -webkit-tap-highlight-color: transparent;
-        width: 16px;
-        height: 14px;
-        cursor: pointer;
-    }
 }

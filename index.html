@@ -42,7 +42,7 @@
         </nav>
     </header>
 
-    <!-- Mobile Navbar -->
+    <!-- Mobile Navbar. Appears on small screen -->
     <div id="mobile-navbar">
         <div class="header-section">
             <div class="logo-close-btn">
@@ -148,7 +148,7 @@
     <!-- mobile navbar closer -->
     <div id="closer"></div>
 
-    <!-- Content -->
+    <!-- More News section -->
     <section class="news">
         <div class="world-news">
             <div class="world-news-container">
@@ -176,6 +176,24 @@
                     
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="trending">
+        <div class="title-button">
+            <h3 class="uppercase">trending</h3>
+            <div class="buttons">
+                <button id="previous-trending-btn">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button id="next-trending-btn">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+        <div class="trending-div" id="trending-space" >   
+            
         </div>
     </section>
 
@@ -263,8 +281,11 @@
         </div>
     </footer>
 
+    <!-- general -->
     <script src="src/js/main.js"></script>
+    <!-- Burger menu toggle -->
     <script src="src/js/toggleBurgerMenu.js"></script>
+    <!-- User info show -->
     <script src="src/js/userinfoshow.js"></script>
 </body>
 </html>

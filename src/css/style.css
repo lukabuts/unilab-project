@@ -45,7 +45,7 @@ body{
 
 .news .world-news .world-news-container,
 .news .more-news .more-news-container{
-    width: 85%;
+    width: 80%;
     min-width: 300px
 }
 
@@ -122,26 +122,96 @@ body{
     margin-bottom: 20px;
 }
 
-.news .more-news .more-news-container .articles .article p,
-.news .more-news .more-news-container .articles .article .time span{
+.news .more-news .more-news-container .articles .article p{
     color: var(--description-text-color);
     margin: 10px 0;
 }
-
-.news .more-news .more-news-container .articles .article .time{
+/* Trere are many tima elements so I style all of them here */
+.time{
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+.time span{
+    color: var(--description-text-color);
+}
+
+/* Trending section */
+.trending{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.trending .title-button{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-family-helvetica);
+}
+
+.trending .title-button .buttons{
+    display: flex;
+    gap: 40px;
+}
+
+.trending .trending-div{
+    display: flex;
+    justify-items: center;
+    gap: 40px;
+    width: 80%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.trending .trending-div::-webkit-scrollbar{
+    display: none;
+}
+
+.trending .trending-div .item{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.trending .trending-div .item .img-div{
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.trending .trending-div .item .info{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 50%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 0 0 6px 6px;
+}
+
+
 @media (max-width: 375px) {
     .news .world-news .world-news-container,
-    .news .more-news .more-news-container{
+    .news .more-news .more-news-container,
+    .trending .trending-div{
         min-width: 260px
     }
 
     .news .world-news, .news .more-news{
         padding: 40px 0;
+    }
+
+    .trending .trending-div .item{
+        width: 260px;
     }
 
 }

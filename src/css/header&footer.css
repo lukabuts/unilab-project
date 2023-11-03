@@ -223,7 +223,7 @@ footer .social-media ul{
     flex-direction: column;
     height: 100%;
     width: 85%;
-    left: -3000px;
+    left: -5000px;
     top: 0;
     z-index: 999;
 

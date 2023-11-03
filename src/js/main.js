@@ -1,3 +1,4 @@
+/* Generiting More News in More News section */
 const articleSpace = document.getElementById('article-space');
 const nextNewsBtn = document.getElementById('next-news-btn');
 const previousNewsBtn = document.getElementById('previous-news-btn');
@@ -41,25 +42,25 @@ const newsInfo = [
       ],
 ]
 
-let count = 0;
+let newsCount = 0;
 
 function generateArticles(){
     articleSpace.innerHTML = `
     <div class="article">
                     <h3 class="uppercase">
-                        ${newsInfo[count][0].title}
+                        ${newsInfo[newsCount][0].title}
                     </h3>
-                    <h4>${newsInfo[count][0].subtitle}</h4>
-                    <p>${newsInfo[count][0].description}</p>
+                    <h4>${newsInfo[newsCount][0].subtitle}</h4>
+                    <p>${newsInfo[newsCount][0].description}</p>
                     <div class="time">
                         <img src="images/time.svg" alt="time">
                         <p>2 min ago</p>
                     </div>
                 </div>
                 <div class="article">
-                    <h3 class="uppercase">${newsInfo[count][1].title}</h3>
-                    <h4>${newsInfo[count][1].subtitle}</h4>
-                    <p class="description">${newsInfo[count][1].description}</p>
+                    <h3 class="uppercase">${newsInfo[newsCount][1].title}</h3>
+                    <h4>${newsInfo[newsCount][1].subtitle}</h4>
+                    <p class="description">${newsInfo[newsCount][1].description}</p>
                     <div class="time">
                         <img src="images/time.svg" alt="time">
                         <span>2 min ago</span>
@@ -71,24 +72,107 @@ function generateArticles(){
 generateArticles();
 
 nextNewsBtn.addEventListener('click', () => {
-    if(count === newsInfo.length - 2) {
+    if(newsCount === newsInfo.length - 2) {
         nextNewsBtn.disabled = true;
     };
-    count++;
+    newsCount++;
     generateArticles();
     previousNewsBtn.disabled = false;
   });
   
-
-
 previousNewsBtn.addEventListener('click', ()=>{
-    if(count === 1) {
+    if(newsCount === 1) {
         previousNewsBtn.disabled = true;
     };
-    count--;
+    newsCount--;
     generateArticles();
     nextNewsBtn.disabled = false;
 })
 
 
 
+/* Generiting Trending items in Trending section */
+const trendingSpace = document.getElementById('trending-space')
+
+const trendingInfo = [
+  {
+    img: "images/Image.svg",
+    title: "Exciting Adventure Awaits",
+    desc: "Discover new places and experiences around the world.",
+    time: "Just now"
+  },
+  {
+    img: "images/annie-spratt-216507-unsplash.svg",
+    title: "Tech Innovation Breakthrough",
+    desc: "Revolutionary technologies that will shape the future.",
+    time: "1h ago"
+  },
+  {
+    img: "images/carlos-hevia-628890-unsplash.svg",
+    title: "Culinary Delights Unveiled",
+    desc: "Explore the art of cooking from top chefs worldwide.",
+    time: "3h ago"
+  },
+  {
+    img: "images/Image.svg",
+    title: "Breathtaking Natural Wonders",
+    desc: "Experience the beauty of the world's most stunning landscapes.",
+    time: "2m ago"
+  },
+  {
+    img: "images/annie-spratt-216507-unsplash.svg",
+    title: "Health and Wellness Insights",
+    desc: "Tips and tricks for a healthier and happier life.",
+    time: "1h ago"
+  },
+  {
+    img: "images/carlos-hevia-628890-unsplash.svg",
+    title: "Artistic Creations Showcase",
+    desc: "Discover the works of talented artists and creators.",
+    time: "3h ago"
+  },
+];
+
+function generateTrendingPlaces(){
+  trendingSpace.innerHTML = trendingInfo.map(info => {
+   return `
+  <div class="item" id="item">
+      <div class="img-div">
+      <img src="${info.img}" alt="${info.title}">
+      </div>
+      <div class="info">
+          <h3>${info.title}</h3>
+          <p>${info.desc}</p>
+          <div class="time">
+              <img src="images/time.svg" alt="time">
+              <span>${info.time}</span>
+          </div>
+      </div>
+  </div>
+`
+  }).join("")
+}
+
+generateTrendingPlaces();
+
+/* add scroll function to trendingSpace div */
+const previousTrendingBtn = document.getElementById('previous-trending-btn');
+const nextTrendingBtn = document.getElementById('next-trending-btn');
+console.log(nextTrendingBtn);
+/* const item = document.getElementById('item'); */
+
+/* Getting item Width */
+const itemWidth = trendingSpace.offsetWidth + 40; /* Gap is 40 px */
+
+previousTrendingBtn.addEventListener('click', () => {
+  trendingSpace.scrollLeft -= itemWidth;
+});
+
+nextTrendingBtn.addEventListener('click', () => {
+  trendingSpace.scrollLeft += itemWidth;
+})
+
+trendingSpace.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  trendingSpace.scrollLeft += e.deltaY;
+})

@@ -2,6 +2,21 @@
 const userImg  = document.getElementById('user-img');
 const userInfo = document.getElementById('user-info');
 
+/* showUserInfo function trigger */
 userImg.addEventListener('click', () => {
-    userInfo.classList.toggle('active')
+    if(!userInfo.classList.contains('active')){
+        showUserInfo();
+    } else{
+        hideUserInfo();
+    }
 })
+
+/* showUserInfo */
+function showUserInfo(){
+    userInfo.classList.add('active');  
+}
+
+/* hideUserInfo */
+function hideUserInfo(){
+    userInfo.classList.remove('active');
+}

@@ -202,7 +202,14 @@ body{
     height: 200px;
     padding: 40px 20px;
     background-color: #fff;
+    color: var(--description-text-color);
     border-radius: 0 0 6px 6px;
+}
+
+.trending .trending-div .item .info h3{
+    font-size: 16px;
+    color: black;
+    font-family: var(--font-family-helvetica);
 }
 
 

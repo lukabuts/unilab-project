@@ -184,8 +184,8 @@ trendingSpace.addEventListener('wheel', (e) => {
 
 
 /* Lazy loading img */
-const trendingImgs = document.querySelectorAll('.trending-img');
-trendingImgs.forEach(img => {
+const lazyLoadImgs = document.querySelectorAll('.trending-img');
+lazyLoadImgs.forEach(img => {
   if(img.complete){
     loaded(img);
   } else{

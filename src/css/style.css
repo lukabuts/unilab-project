@@ -163,6 +163,7 @@ body{
     justify-items: center;
     gap: 40px;
     width: 80%;
+    
     overflow-x: scroll;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -171,13 +172,9 @@ body{
     display: none;
 }
 
-.trending .trending-div .item{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
 .trending .trending-div .item .img-div{
+    width: 360px;
+    height: 180px;
     border-radius: 6px 6px 0 0;
     display: flex;
     align-items: center;
@@ -185,14 +182,24 @@ body{
     overflow: hidden;
 }
 
+.trending .trending-div .item .img-div img{
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.trending .trending-div .item .img-div img.loaded{
+    opacity: 1;
+}
+
+
 .trending .trending-div .item .info{
     display: flex;
-    gap: 10px;
-    width: 100%;
-    height: 50%;
     flex-direction: column;
     align-items: start;
     justify-content: space-around;
+    gap: 10px;
+    width: 100%;
+    height: 200px;
     padding: 40px 20px;
     background-color: #fff;
     border-radius: 0 0 6px 6px;
@@ -210,7 +217,8 @@ body{
         padding: 40px 0;
     }
 
-    .trending .trending-div .item{
+    .trending .trending-div .item, 
+    .trending .trending-div .item .img-div{
         width: 260px;
     }
 

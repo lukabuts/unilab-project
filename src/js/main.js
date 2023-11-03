@@ -96,37 +96,43 @@ const trendingSpace = document.getElementById('trending-space')
 
 const trendingInfo = [
   {
-    img: "images/Image.svg",
+    img: "images/image.png",
+    smallImg: "images/image-small.png",
     title: "Exciting Adventure Awaits",
     desc: "Discover new places and experiences around the world.",
     time: "Just now"
   },
   {
-    img: "images/annie-spratt-216507-unsplash.svg",
+    img: "images/image-2.png",
+    smallImg: "images/image-2-small.png",
     title: "Tech Innovation Breakthrough",
     desc: "Revolutionary technologies that will shape the future.",
     time: "1h ago"
   },
   {
-    img: "images/carlos-hevia-628890-unsplash.svg",
+    img: "images/image-3.png",
+    smallImg: "images/image-3-small.png",
     title: "Culinary Delights Unveiled",
     desc: "Explore the art of cooking from top chefs worldwide.",
     time: "3h ago"
   },
   {
-    img: "images/Image.svg",
+    img: "images/image.png",
+    smallImg: "images/image-small.png",
     title: "Breathtaking Natural Wonders",
     desc: "Experience the beauty of the world's most stunning landscapes.",
     time: "2m ago"
   },
   {
-    img: "images/annie-spratt-216507-unsplash.svg",
+    img: "images/image-2.png",
+    smallImg: "images/image-2-small.png",
     title: "Health and Wellness Insights",
     desc: "Tips and tricks for a healthier and happier life.",
     time: "1h ago"
   },
   {
-    img: "images/carlos-hevia-628890-unsplash.svg",
+    img: "images/image-3.png",
+    smallImg: "images/image-3-small.png",
     title: "Artistic Creations Showcase",
     desc: "Discover the works of talented artists and creators.",
     time: "3h ago"
@@ -137,8 +143,8 @@ function generateTrendingPlaces(){
   trendingSpace.innerHTML = trendingInfo.map(info => {
    return `
   <div class="item" id="item">
-      <div class="img-div">
-      <img src="${info.img}" alt="${info.title}">
+      <div class="img-div" style="background: url(${info.smallImg}) center/cover no-repeat;">
+      <img src="${info.img}" class="trending-img">
       </div>
       <div class="info">
           <h3>${info.title}</h3>
@@ -158,7 +164,6 @@ generateTrendingPlaces();
 /* add scroll function to trendingSpace div */
 const previousTrendingBtn = document.getElementById('previous-trending-btn');
 const nextTrendingBtn = document.getElementById('next-trending-btn');
-console.log(nextTrendingBtn);
 /* const item = document.getElementById('item'); */
 
 /* Getting item Width */
@@ -176,3 +181,19 @@ trendingSpace.addEventListener('wheel', (e) => {
   e.preventDefault();
   trendingSpace.scrollLeft += e.deltaY;
 })
+
+
+/* Lazy loading img */
+const trendingImgs = document.querySelectorAll('.trending-img');
+trendingImgs.forEach(img => {
+  if(img.complete){
+    loaded(img);
+  } else{
+    img.addEventListener("load", loaded(img))
+  }
+})
+
+function loaded(img){
+  img.classList.add('loaded')
+}
+

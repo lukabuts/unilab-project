@@ -96,42 +96,42 @@ const trendingSpace = document.getElementById('trending-space')
 
 const trendingInfo = [
   {
-    img: "images/image.png",
+    img: "images/image.svg",
     smallImg: "images/image-small.png",
     title: "Exciting Adventure Awaits",
     desc: "Discover new places and experiences around the world.",
     time: "Just now"
   },
   {
-    img: "images/image-2.png",
+    img: "images/image-2.svg",
     smallImg: "images/image-2-small.png",
     title: "Tech Innovation Breakthrough",
     desc: "Revolutionary technologies that will shape the future.",
     time: "1h ago"
   },
   {
-    img: "images/image-3.png",
+    img: "images/image-3.svg",
     smallImg: "images/image-3-small.png",
     title: "Culinary Delights Unveiled",
     desc: "Explore the art of cooking from top chefs worldwide.",
     time: "3h ago"
   },
   {
-    img: "images/image.png",
+    img: "images/image.svg",
     smallImg: "images/image-small.png",
     title: "Breathtaking Natural Wonders",
     desc: "Experience the beauty of the world's most stunning landscapes.",
     time: "2m ago"
   },
   {
-    img: "images/image-2.png",
+    img: "images/image-2.svg",
     smallImg: "images/image-2-small.png",
     title: "Health and Wellness Insights",
     desc: "Tips and tricks for a healthier and happier life.",
     time: "1h ago"
   },
   {
-    img: "images/image-3.png",
+    img: "images/image-3.svg",
     smallImg: "images/image-3-small.png",
     title: "Artistic Creations Showcase",
     desc: "Discover the works of talented artists and creators.",

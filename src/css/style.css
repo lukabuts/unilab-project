@@ -195,7 +195,9 @@ body{
         min-width: 260px
     }
 
-    .news .world-news, .news .more-news{
+    .news .world-news, 
+    .news .more-news,
+    .trending{
         padding: 40px 0;
     }
 

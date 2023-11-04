@@ -1,0 +1,279 @@
+:root{
+    --body-background-color: #F6F8F9;
+    --pink-text-color: #FA6980; 
+    --description-text-color: #A6ADB4;
+    --font-family-helvetica: Arial, Helvetica, sans-serif;
+    --border-color: #EBEDED; 
+    --min-width: 300px;
+}
+
+body{
+    background-color: var(--body-background-color);
+}
+
+/* Common Styling */
+.textp{       
+    color: var(--description-text-color);
+    font-family: var(--font-family-helvetica);
+    font-size: 14px;
+    line-height: 26px;
+}
+
+/* Container */
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 10% 150px;
+    gap: 40px;
+}
+
+.container .page-title{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: -10px;
+}
+
+.container .page-title div{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.container .page-title div h3{
+    font-family: var(--font-family-helvetica);
+    font-size: 11px;
+}
+
+.container .page-title div p{
+    font-family: var(--font-family-helvetica);
+    color: var(--description-text-color);
+    font-size: 11px;
+    font-weight: bold;
+}
+    
+.container .page-title button{
+    padding: 12px;
+    border: 2px solid #EBEDED;
+    border-radius: 6px;
+}
+
+/* World news search */
+.container .world-news-search{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+    /* shared style */
+.container .world-news-search .discover-news,
+.container .world-news-search .search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 50px;
+    flex: 1;
+}
+    /* discover news */
+.container .world-news-search .discover-news{
+    text-align: center;
+    background: url(../../images/discover-news-bcg.svg) center/cover no-repeat;
+    min-width: var(--min-width);
+}
+
+.container .world-news-search .discover-news h1{
+    color: #fff;
+    font-size: 32px;
+    font-family: var(--font-family-helvetica);
+}
+
+.container .world-news-search .discover-news h1::after{
+    content: '';
+    width: 30%;
+    height: 2px;
+    background: var(--pink-text-color);
+    display: block;
+    margin: 20px auto;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.container .world-news-search .discover-news h4{
+    color: #fff;
+    font-size: 16px;
+    font-family: var(--font-family-helvetica);
+    margin-bottom: 40px;
+}
+
+.container .world-news-search .discover-news img{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+    /* search */
+.container .world-news-search .search{
+    background-color: #fff;
+    min-width: var(--min-width);
+}
+
+.container .world-news-search .search form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.container .world-news-search .search form .input-div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container .world-news-search .search form .input-div label{
+    font-size: 13px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.container .world-news-search .search form .input-div input{
+    border: 2px solid var(--border-color);
+    padding: 12px 20px;
+    border-radius: 6px;
+}
+
+.container .world-news-search .search form .input-div input::-webkit-calendar-picker-indicator{
+    background-image: url('../../images/dropdown.svg'); 
+    background-size: 12px 12px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+
+.container .world-news-search .search form button{
+    align-self: flex-start;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: var(--pink-text-color);
+    border-radius: 6px;
+    padding: 16px 30px;
+}
+
+/* User Experience */
+.container .user-experience{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 41px 0;
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.container .user-experience .title{
+    flex: 1;
+    min-width: var(--min-width);
+}
+
+.container .user-experience .title img{
+    margin-bottom: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.container .user-experience .title h2{
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+.container .user-experience .experience{
+    display: flex;
+    gap: 40px;
+    flex: 2;
+    flex-wrap: wrap;
+    min-width: calc(var(--min-width) * 2 + 40px)
+}
+
+.container .user-experience .experience div{
+    flex: 1;
+    min-width: var(--min-width);
+}
+
+.container .user-experience .experience div .time{
+    margin-top: 20px;
+}
+
+/* Elephant Styling */
+.container .elephant{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.container .elephant .img-div{
+    background: url(../../images/elephant.svg) center/cover no-repeat;
+    height: 500px;
+    border-radius: 6px;
+}
+
+.container .elephant .description{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 65%;
+}
+
+@media (max-width: 820px) {
+    .container .world-news-search .discover-news,
+    .container .world-news-search .search{
+        padding: 70px 20px;
+    }
+
+    .container .user-experience .experience{
+        min-width: auto;
+    }
+
+    .container .elephant .img-div{
+        height: 260px;
+    }
+
+    .container .elephant .description{
+        width: 100%;
+    }
+}
+
+@media (max-width: 465px) {
+    .container{
+        margin: 30px 0 ;
+    }
+
+    .container .page-title{
+        display: none;
+    }
+
+    .container .world-news-search .discover-news,
+    .container .world-news-search .search{
+        padding: 50px auto;
+    }
+
+    .container .user-experience,
+    .container .elephant{
+        margin: auto 24px;
+    }
+
+    .container .world-news-search .search, 
+    .container .user-experience .title,
+    .container .user-experience .experience div,
+    .container .world-news-search .discover-news{
+        min-width: 240px;
+    }
+
+    .container .elephant .img-div{
+        height: 180px;
+    }
+}

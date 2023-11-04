@@ -1,27 +1,12 @@
-/* General styling */
-*, 
-*::after, 
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 :root{
     --body-background-color: #F6F8F9;
     --pink-text-color: #FA6980; 
     --description-text-color: #A6ADB4;
     --font-family-helvetica: Arial, Helvetica, sans-serif;
-
 }
 
 body{
     background-color: var(--body-background-color);
-}
-
-/* As there are so many elements with uppercase text, in order to avoid repeating the same line of code, it is better to use class for them  */
-.uppercase{
-    text-transform: uppercase;
 }
 
 /* News */
@@ -124,16 +109,6 @@ body{
     color: var(--description-text-color);
     margin: 10px 0;
 }
-/* Trere are many tima elements so I style all of them here */
-.time{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.time span{
-    color: var(--description-text-color);
-}
 
 /* Trending section */
 .trending{
@@ -141,7 +116,7 @@ body{
     flex-direction: column;
     gap: 40px;
     align-items: center;
-    padding: 40px 0;
+    padding: 40px 25px;
 }
 
 .trending .title-button{
@@ -171,9 +146,12 @@ body{
 }
 
 .trending .trending-div .item .img-div{
+    border-radius: 6px;
+}
+
+.trending .trending-div .item .img-div{
     width: 360px;
     height: 180px;
-    border-radius: 6px 6px 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -201,7 +179,6 @@ body{
     padding: 40px 20px;
     background-color: #fff;
     color: var(--description-text-color);
-    border-radius: 0 0 6px 6px;
 }
 
 .trending .trending-div .item .info h3{
@@ -222,9 +199,9 @@ body{
         padding: 40px 0;
     }
 
-    .trending .trending-div .item, 
     .trending .trending-div .item .img-div{
         width: 260px;
+        height: 130px;
     }
 
 }

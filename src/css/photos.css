@@ -1,15 +1,6 @@
 /* Importing Font */
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Nunito&family=Oxanium&display=swap');
 
-/* General Styling */
-*, 
-*::after, 
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Stiling Body */
 body {
     background-color: #e4e4e4;

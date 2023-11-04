@@ -1,12 +1,33 @@
-/* Styling header */
+/* General styling */
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root{
     --primary-footer-color: #CBD0D3;
     --font-family-helvetica: Arial, Helvetica, sans-serif;
     --footer-background-color: #A6ADB4;
+    --pink-text-color: #FA6980; 
 }
 
+/* As there are so many elements with uppercase text, in order to avoid repeating the same line of code, it is better to use class for them  */
 .uppercase{
     text-transform: uppercase;
+}
+
+/* There are many time elements so I style all of them here */
+.time{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.time span{
+    color: var(--description-text-color);
 }
 
 ul{
@@ -26,6 +47,7 @@ button{
     cursor: pointer;
 }
 
+/* Styling header */
 header{
     display: flex;
     justify-content: space-between;
@@ -39,6 +61,10 @@ header{
     z-index: 99;
 }
 
+header.active{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
 /* elements that don't appear by default */
 .burger-btn, .exit-btn, .filter-btn, #user-info{
     display: none;
@@ -48,7 +74,7 @@ header{
     font-size: 13px;
     font-weight: bold;
     font-family: var(--font-family-helvetica);
-    color: #FA6980;
+    color: var(--pink-text-color);
 }
 
 header nav{
@@ -72,7 +98,7 @@ header nav ul li a::after {
     content: '';
     width: 0;
     height: 2px;
-    background: #FA6980;
+    background: var(--pink-text-color);
     display: block;
     margin: auto;
     transition: 0.3s;

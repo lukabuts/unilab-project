@@ -14,9 +14,7 @@ window.addEventListener('resize', () => {
     if(window.innerWidth >= 465) exitNavbar();
 })
 window.addEventListener('click', (e) => {
-    if(e.clientX > mobileNavbar.clientWidth){
-        exitNavbar();
-    }
+    if(e.clientX > mobileNavbar.clientWidth) exitNavbar();
 })
 
  /* Exiting mobile-nav menu */

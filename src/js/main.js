@@ -188,6 +188,12 @@ trendingSpace.addEventListener('wheel', (e) => {
   disablePreviousTrendingBtn();
 })
 
+/* for mobile users */
+trendingSpace.addEventListener('scroll', (e) => {
+  disableNextTrendingBtn();
+  disablePreviousTrendingBtn();
+})
+
 /* disable Trending Btns */
 function disableNextTrendingBtn(){
   const trendingSpaceCurrentWidth = trendingSpace.clientWidth;

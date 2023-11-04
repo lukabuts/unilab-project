@@ -188,7 +188,7 @@ body{
 }
 
 
-@media (max-width: 375px) {
+@media (max-width: 505px) {
     .news .world-news .world-news-container,
     .news .more-news .more-news-container,
     .trending .trending-div{

@@ -93,8 +93,11 @@ body {
     background-color: #222222;
 }
 
-@media (max-width: 600px) {
-    /* Error Msg */
+@media (max-width: 465px) {
+    #user-info{
+        display: none !important;
+    }
+    
     .container .error h1{
         margin: 10px 0;
         font-size: 20px;
@@ -107,13 +110,6 @@ body {
     .container img{
         width: 100px;
     }
-}
-
-@media (max-width: 465px) {
-    #user-info{
-        display: none !important;
-    }
-    
 
     /* Loading */
     .container .loading img{

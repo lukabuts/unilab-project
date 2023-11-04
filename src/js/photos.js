@@ -3,7 +3,7 @@ const footer = document.getElementById('footer')
 
 /* Fetching data function */
 function fetchData() {
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('https://jsonplaceholder.tpicode.com/posts')
     .then(response => {
         if (!response.ok) {
             showError();
@@ -26,9 +26,7 @@ fetchData();
 /* Generating cards function */
 function generateCard(data) {
     /* Removes fixedbottom class if everithing goes well */
-    if(footer.classList.contains('fixedBottom')){
-        footer.classList.remove('fixedBottom')
-    }
+    footer.classList.contains('fixedBottom') && footer.classList.remove('fixedBottom');
     container.innerHTML = data.map(user => {
         return `
         <div class="card">

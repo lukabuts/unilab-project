@@ -198,8 +198,7 @@ trendingSpace.addEventListener('scroll', (e) => {
 function disableNextTrendingBtn(){
   const trendingSpaceCurrentWidth = trendingSpace.clientWidth;
   if(
-    trendingInfo.length * trendingItemWidth + (trendingInfo.length - 1) * 40 - 2 <= Math.round(trendingSpace.scrollLeft + trendingSpaceCurrentWidth) || 
-    trendingInfo.length * trendingItemWidth + (trendingInfo.length - 1) * 40 + 2 <= Math.round(trendingSpace.scrollLeft + trendingSpaceCurrentWidth)
+    trendingInfo.length * trendingItemWidth + (trendingInfo.length - 1) * 40 - 2 <= Math.round(trendingSpace.scrollLeft + trendingSpaceCurrentWidth)
   ){
     nextTrendingBtn.disabled = true;
   } else{

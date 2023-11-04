@@ -92,7 +92,7 @@ previousNewsBtn.addEventListener('click', ()=>{
 
 
 /* Generiting Trending items in Trending section */
-const trendingSpace = document.getElementById('trending-space')
+const trendingSpace = document.getElementById('trending-space');
 
 const trendingInfo = [
   {
@@ -190,7 +190,11 @@ trendingSpace.addEventListener('wheel', (e) => {
 
 /* disable Trending Btns */
 function disableNextTrendingBtn(){
-  if(trendingInfo.length * trendingItemWidth + (trendingInfo.length - 1) * 40 === trendingSpace.scrollLeft + trendingSpace.clientWidth){
+  const trendingSpaceCurrentWidth = trendingSpace.clientWidth;
+  if(
+    trendingInfo.length * trendingItemWidth + (trendingInfo.length - 1) * 40 - 2 <= Math.round(trendingSpace.scrollLeft + trendingSpaceCurrentWidth) || 
+    trendingInfo.length * trendingItemWidth + (trendingInfo.length - 1) * 40 + 2 <= Math.round(trendingSpace.scrollLeft + trendingSpaceCurrentWidth)
+  ){
     nextTrendingBtn.disabled = true;
   } else{
     nextTrendingBtn.disabled = false;

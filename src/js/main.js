@@ -144,7 +144,7 @@ function generateTrendingPlaces(){
    return `
   <div class="item" id="item">
       <div class="img-div" style="background: url(${info.smallImg}) center/cover no-repeat;">
-      <img src="${info.img}" class="trending-img">
+      <img src="${info.img}" class="trending-img" loading="lazy">
       </div>
       <div class="info">
           <h3>${info.title}</h3>

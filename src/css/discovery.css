@@ -216,9 +216,25 @@ body{
 }
 
 .container .elephant .img-div{
-    background: url(../../images/elephant.svg) center/cover no-repeat;
+    background: url(../../images/elephant-small.png) center/cover no-repeat;
     height: 500px;
     border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container .elephant .img-div img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.container .elephant .img-div img.loaded{
+    opacity: 1;
 }
 
 .container .elephant .description{

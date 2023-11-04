@@ -97,18 +97,22 @@ body {
     #user-info{
         display: none !important;
     }
+
+    .container .error{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
     
     .container .error h1{
-        margin: 10px 0;
-        font-size: 20px;
+        margin: 15px 0;
+        font-size: 22px;
     }
 
-    .container .error button{
-        padding: 5px 10px;
-        font-size: 10px;
-    }
     .container img{
-        width: 100px;
+        width: 150px;
     }
 
     /* Loading */

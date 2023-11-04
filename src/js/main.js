@@ -166,14 +166,15 @@ const previousTrendingBtn = document.getElementById('previous-trending-btn');
 const nextTrendingBtn = document.getElementById('next-trending-btn');
 /* const item = document.getElementById('item'); */
 
-/* Getting item Width */
-const itemWidth = trendingSpace.offsetWidth + 40; /* Gap is 40 px */
-
 previousTrendingBtn.addEventListener('click', () => {
+  /* Getting item Width When button is clicked. If I get if from outside of the function, it won't be correct */
+  const itemWidth = trendingSpace.offsetWidth + 40; /* Gap is 40 px */
   trendingSpace.scrollLeft -= itemWidth;
 });
 
 nextTrendingBtn.addEventListener('click', () => {
+  /* Getting item Width When button is clicked */
+  const itemWidth = trendingSpace.offsetWidth + 40; /* Gap is 40 px */
   trendingSpace.scrollLeft += itemWidth;
 })
 

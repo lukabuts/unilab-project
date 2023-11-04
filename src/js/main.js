@@ -164,24 +164,46 @@ generateTrendingPlaces();
 /* add scroll function to trendingSpace div */
 const previousTrendingBtn = document.getElementById('previous-trending-btn');
 const nextTrendingBtn = document.getElementById('next-trending-btn');
-/* const item = document.getElementById('item'); */
+const trendingItem = document.getElementById('item')
+
+/* Getting trendingItem width */
+const trendingItemWidth = trendingItem.clientWidth
 
 previousTrendingBtn.addEventListener('click', () => {
-  /* Getting item Width When button is clicked. If I get if from outside of the function, it won't be correct */
-  const itemWidth = trendingSpace.offsetWidth + 40; /* Gap is 40 px */
-  trendingSpace.scrollLeft -= itemWidth;
+  trendingSpace.scrollLeft -= trendingItemWidth + 40; /* Gap is 40px */
+  disableNextTrendingBtn();
+  disablePreviousTrendingBtn();
 });
 
 nextTrendingBtn.addEventListener('click', () => {
-  /* Getting item Width When button is clicked */
-  const itemWidth = trendingSpace.offsetWidth + 40; /* Gap is 40 px */
-  trendingSpace.scrollLeft += itemWidth;
+  trendingSpace.scrollLeft += trendingItemWidth  + 40; /* Gap is 40px */
+  disableNextTrendingBtn();
+  disablePreviousTrendingBtn();
 })
 
 trendingSpace.addEventListener('wheel', (e) => {
   e.preventDefault();
   trendingSpace.scrollLeft += e.deltaY;
+  disableNextTrendingBtn();
+  disablePreviousTrendingBtn();
 })
+
+/* disable Trending Btns */
+function disableNextTrendingBtn(){
+  if(trendingInfo.length * trendingItemWidth + (trendingInfo.length - 1) * 40 === trendingSpace.scrollLeft + trendingSpace.clientWidth){
+    nextTrendingBtn.disabled = true;
+  } else{
+    nextTrendingBtn.disabled = false;
+  }
+}
+
+function disablePreviousTrendingBtn() {
+  if(trendingSpace.scrollLeft === 0){
+    previousTrendingBtn.disabled = true;
+  } else{
+    previousTrendingBtn.disabled = false;
+  }
+}
 
 
 /* Lazy loading img */

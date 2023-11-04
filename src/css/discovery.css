@@ -252,6 +252,36 @@ body{
     width: 65%;
 }
 
+.container .elephant .description .tablet-p{
+    color: black;
+    display: none;
+}
+
+/* Numbers div */
+.container .numbers-div{
+    display: none;
+    align-items: baseline;
+    gap: 24px;
+}
+
+.container .numbers-div p{
+    color: var(--description-text-color);
+    font-family: var(--font-family-helvetica);
+    padding-bottom: 11px;
+}
+
+.container .numbers-div p.active{
+    color: black;
+}
+
+.container .numbers-div p.active{
+    border-bottom: 2px solid var(--pink-text-color);
+}
+
+.container .numbers-div button img{
+    margin-bottom: 5.5px;
+}
+
 @media (max-width: 820px) {
     .container .world-news-search .discover-news,
     .container .world-news-search .search{
@@ -268,6 +298,11 @@ body{
 
     .container .elephant .description{
         width: 100%;
+    }
+
+    .container .numbers-div,
+    .container .elephant .description .tablet-p{
+        display: flex;
     }
 }
 

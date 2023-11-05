@@ -9,6 +9,45 @@ body{
     background-color: var(--body-background-color);
 }
 
+.title-button{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-family-helvetica);
+}
+
+.title-button .buttons{
+    display: flex;
+    gap: 40px;
+}
+
+    /* Lazy imgs */
+.lazy-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.lazy-img.loaded{
+    opacity: 1;
+}
+
+.happening-article{
+    position: relative;
+}
+
+.happening-article .description, 
+.happening-article .title {
+    position: relative;
+    z-index: 1;
+}
+
 /* News */
 .news{
     display: flex;
@@ -76,15 +115,8 @@ body{
     margin-bottom: 40px;
     border-bottom: 2px solid #EBEDED;
     font-family: var(--font-family-helvetica);
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
 }
-
-.news .more-news .more-news-container .title-button .buttons{
-    display: flex;
-    gap: 40px;
-}
-
 
 .news .more-news .more-news-container .articles{
     display: flex;
@@ -119,18 +151,6 @@ body{
     padding: 40px 25px;
 }
 
-.trending .title-button{
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    font-family: var(--font-family-helvetica);
-}
-
-.trending .title-button .buttons{
-    display: flex;
-    gap: 40px;
-}
-
 .trending .trending-div{
     display: flex;
     justify-items: center;
@@ -151,15 +171,10 @@ body{
 }
 
 .trending .trending-div .item .img-div{
-    border-radius: 6px;
-}
-
-.trending .trending-div .item .img-div{
+    position: relative;
     width: 360px;
     height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 6px;
     overflow: hidden;
 }
 
@@ -309,6 +324,172 @@ body{
     gap: 23px;
 }
 
+
+/* Happening Now */
+.happening-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 25px 100px;
+}
+
+.happening-section .articles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 80%;
+}
+
+    /* ! Large articles */
+.happening-section .articles .large-articles{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 2;
+}
+
+.happening-section .articles .large-articles .happening-article{
+    background: url(../../images/bridge-small.png) center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 430px;
+    min-width: 580px
+}
+
+.happening-section .articles .large-articles .happening-article:nth-child(2){
+    background: url(../../images/forrest-small.png) center/cover no-repeat;
+}
+
+.happening-section .articles .large-articles .happening-article .title, 
+.happening-section .articles .large-articles .happening-article .description h1,
+.happening-section .articles .large-articles .happening-article .description p{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: var(--font-family-helvetica);
+}
+
+.happening-section .articles .large-articles .happening-article .title{
+    margin: 40px 40px 0 40px;
+}
+
+.happening-section .articles .large-articles .happening-article .description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 40px 40px 40px;
+}
+
+.happening-section .articles .large-articles .happening-article .description h1{
+    font-size: 24px;
+}
+
+.happening-section .articles .large-articles .happening-article .description p{
+    font-weight: normal;
+}
+
+    /* ! small articles */
+.happening-section .articles .small-articles{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: 100%;
+    flex: 1;
+}
+ 
+.happening-section .articles .small-articles .happening-article{
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.happening-section .articles .small-articles .happening-article:first-child .img-div{
+    background: url(../../images/parrot-small.png) center/cover no-repeat;
+}
+
+.happening-section .articles .small-articles .happening-article:nth-child(2) .img-div{
+    background: url(../../images/elephant-small.png) center/cover no-repeat;
+}
+
+.happening-section .articles .small-articles .happening-article:nth-child(3) .img-div{
+    background: url(../../images/road-small.png) center/cover no-repeat;
+}
+
+.happening-section .articles .small-articles .happening-article .description{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.happening-section .articles .small-articles .happening-article .description .time a{
+    text-decoration: underline;
+}
+
+.happening-section .articles .small-articles .happening-article .img-div{
+    position: relative;
+    height: 210px;
+} 
+
+@media (max-width: 1189px) {
+    .happening-section .articles .small-articles{
+        flex-direction: row;
+        gap: 20px;
+        justify-content: space-around;
+    }
+
+    .happening-section .articles .small-articles .happening-article .img-div{
+        height: 180px;
+    }  
+}
+
+@media (max-width: 1163px) {
+    .happening-section .articles{
+        flex-direction: column;
+    }
+
+    .happening-section .articles .small-articles .happening-article{
+        flex: 1;
+    }
+    .happening-section .articles .small-articles .happening-article:nth-child(3){
+        display: none;
+    }
+
+    .happening-section .articles .small-articles .happening-article{
+       min-width: 200px;
+    }
+
+    .happening-section .articles .large-articles .happening-article{
+        min-width: 200px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 790px) {
+    .happening-section .articles .small-articles{
+        flex-direction: column;
+    }
+
+    .happening-section .articles .small-articles .happening-article:nth-child(3){
+        display: block;
+    }
+
+    .happening-section .articles .large-articles .happening-article .title{
+        margin: 20px 20px 0 20px;
+    }
+    
+    .happening-section .articles .large-articles .happening-article .description {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0 20px 20px 20px;
+    }
+}
+
 @media (max-width: 505px) {
     .news .world-news .world-news-container,
     .news .more-news .more-news-container,
@@ -319,7 +500,8 @@ body{
 
     .news .world-news, 
     .news .more-news,
-    .trending{
+    .trending,
+    .happening-section{
         padding: 40px 0;
     }
 
@@ -328,4 +510,32 @@ body{
         height: 130px;
     }
 
+    .happening-section .articles .large-articles .happening-article{
+        height: 300px;
+    }
+
+    .title-button h3{
+        font-size: 14px;
+    }
+
+    .title-button .buttons{
+        gap: 20px;
+    }
+
+    .happening-section .articles .large-articles .happening-article .title{
+        margin: 10px 10px 0 10px;
+        font-size: 16px;
+    }
+    
+    .happening-section .articles .large-articles .happening-article .description {
+        margin: 0 10px 10px 10px;
+    }
+
+    .happening-section .articles .large-articles .happening-article .description h1{
+        font-size: 24px;
+    }
+
+    .happening-section .articles .large-articles .happening-article .description p{
+        font-size: 16px;
+    }
 } 

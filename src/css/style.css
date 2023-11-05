@@ -197,7 +197,7 @@ body{
 
 .mobile-navbar{
     position: fixed;
-    /* top: 0; */  /* !!! */
+    top: 0; 
     height: 100%;
     width: 85%;
     display: flex;

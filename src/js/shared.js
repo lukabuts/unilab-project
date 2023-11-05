@@ -1,25 +1,29 @@
 /* Appearing User info after clicking user img */
 const userImg  = document.getElementById('user-img');
 const userInfo = document.getElementById('user-info');
+const closeUserInfoBtn = document.getElementById('close-user-info-btn');
 
-/* showUserInfo function trigger */
+/* show User Info  */
 userImg.addEventListener('click', () => {
-    if(!userInfo.classList.contains('active')){
-        showUserInfo();
-    } else{
-        hideUserInfo();
-    }
+    userInfo.showModal();
 })
 
-/* showUserInfo */
-function showUserInfo(){
-    userInfo.classList.add('active');  
-}
+/* Hide user info */
+closeUserInfoBtn.addEventListener('click', () => {
+    userInfo.close();
+})
 
-/* hideUserInfo */
-function hideUserInfo(){
-    userInfo.classList.remove('active');
-}
+userInfo.addEventListener('click', (e) => {
+    const userInfoDimensions = userInfo.getBoundingClientRect();
+    if(
+        e.clientX < userInfoDimensions.left || 
+        e.clientX > userInfoDimensions.right || 
+        e.clientY < userInfoDimensions.top ||
+        e.clientY > userInfoDimensions.bottom 
+    ){
+        userInfo.close();
+    }
+})
 
 /* Appearing box shadow to header element */
 const header = document.getElementById('header');

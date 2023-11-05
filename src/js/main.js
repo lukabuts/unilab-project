@@ -144,7 +144,7 @@ function generateTrendingPlaces(){
    return `
   <div class="item" id="item">
       <div class="img-div" style="background: url(${info.smallImg}) center/cover no-repeat;">
-      <img src="${info.img}" class="trending-img" loading="lazy" alt="${info.desc}">
+      <img src="${info.img}" class="lazy-img" loading="lazy" alt="${info.desc}">
       </div>
       <div class="info">
           <h3>${info.title}</h3>
@@ -216,7 +216,7 @@ function disablePreviousTrendingBtn() {
 
 
 /* Lazy loading img */
-const lazyLoadImgs = document.querySelectorAll('.trending-img');
+const lazyLoadImgs = document.querySelectorAll('.lazy-img');
 lazyLoadImgs.forEach(img => {
   if(img.complete){
     loaded(img);

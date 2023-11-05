@@ -190,6 +190,115 @@ body{
     font-family: var(--font-family-helvetica);
 }
 
+/* Mobile Navbar */
+/* ! Mobile navbar not active */
+#mobile-navbar-dialog{
+    border: none;
+}
+
+.mobile-navbar{
+    position: fixed;
+    top: 0;
+    /* left: -3000px; */
+    height: 100%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.6);
+
+    animation: showNav .5s ease-in-out;
+}
+
+@keyframes showNav {
+    0%{
+        left: -500px;
+    }
+    100%{
+        left: 0;
+    }
+}
+
+    /* Mobile Navbar header section */
+
+.mobile-navbar .header-section{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 30px;
+    background-color: #fff;
+    flex:1;
+}
+
+.mobile-navbar .header-section .logo-close-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-navbar .header-section .logo-close-btn button .bi-x-lg{
+    color: red;
+    font-size: 18px;
+}
+
+.mobile-navbar .header-section .links ul{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 40px;
+}
+
+.mobile-navbar .header-section .links ul li a{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.mobile-navbar .header-section .links ul li.active a{
+    font-weight: bold;
+}
+
+.mobile-navbar .header-section .links ul li a img{
+    width: 16px;
+    height: 16px;
+}
+
+
+    /* Mobile Navbar footer section */
+.mobile-navbar .footer-section{
+    display: flex;
+    background-color: var(--footer-background-color);
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 60px 40px 40px 40px;
+}
+
+.mobile-navbar .footer-section .links{
+    display: flex;
+    justify-content: space-between;
+}  
+
+.mobile-navbar .footer-section .links ul{
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+}
+
+.mobile-navbar .footer-section .links ul li{
+    color: var(--primary-footer-color);
+    font-family: var(--font-family-helvetica);
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.mobile-navbar .footer-section .social-media ul{
+    display: flex;
+    gap: 23px;
+}
+
+/* ? აქამდე */
+
 
 @media (max-width: 505px) {
     .news .world-news .world-news-container,

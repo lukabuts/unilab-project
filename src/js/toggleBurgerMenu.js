@@ -5,6 +5,7 @@ const exitBtn = document.getElementById('exitBtn');
 
 /* Open function */
 burgerBtn.addEventListener('click', function(){
+    mobileNavbar.classList.contains('closed') && mobileNavbar.classList.remove('closed');
     mobileNavbarDialog.showModal();
 })
 
@@ -22,5 +23,8 @@ mobileNavbarDialog.addEventListener('click', (e) => {
 
  /* Exiting mobile-nav menu */
  function exitNavbar(){
-    mobileNavbarDialog.close();
+    setTimeout(() => {
+        mobileNavbarDialog.close()
+    }, 500);
+    !mobileNavbar.classList.contains('closed') && mobileNavbar.classList.add('closed');
 }

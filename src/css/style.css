@@ -191,7 +191,6 @@ body{
 }
 
 /* Mobile Navbar */
-/* ! Mobile navbar not active */
 #mobile-navbar-dialog{
     border: none;
 }
@@ -199,7 +198,6 @@ body{
 .mobile-navbar{
     position: fixed;
     top: 0;
-    /* left: -3000px; */
     height: 100%;
     width: 85%;
     display: flex;
@@ -215,6 +213,20 @@ body{
     }
     100%{
         left: 0;
+    }
+}
+
+.mobile-navbar.closed{
+    left: -500px;
+    animation: closeNav .5s ease-in-out;
+}
+
+@keyframes closeNav {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: -500px;
     }
 }
 
@@ -297,13 +309,11 @@ body{
     gap: 23px;
 }
 
-/* ? აქამდე */
-
-
 @media (max-width: 505px) {
     .news .world-news .world-news-container,
     .news .more-news .more-news-container,
-    .trending .trending-div{
+    .trending .trending-div,
+    .trending .title-button{
         min-width: 260px
     }
 
@@ -318,4 +328,4 @@ body{
         height: 130px;
     }
 
-}
+} 

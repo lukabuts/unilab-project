@@ -108,6 +108,8 @@ header.active{
     font-weight: bold;
     font-family: var(--font-family-helvetica);
     color: var(--pink-text-color);
+    cursor: pointer;
+    user-select: none;
 }
 
 header nav{

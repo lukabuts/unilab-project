@@ -89,8 +89,6 @@ previousNewsBtn.addEventListener('click', ()=>{
     nextNewsBtn.disabled = false;
 })
 
-
-
 /* Generiting Trending items in Trending section */
 const trendingSpace = document.getElementById('trending-space');
 
@@ -144,7 +142,7 @@ function generateTrendingPlaces(){
    return `
   <div class="item" id="item">
       <div class="img-div" style="background: url(${info.smallImg}) center/cover no-repeat;">
-      <img src="${info.img}" class="lazy-img" loading="lazy" alt="${info.desc}">
+      <img src="${info.img}" class="lazy-img" loading="lazy">
       </div>
       <div class="info">
           <h3>${info.title}</h3>
@@ -162,23 +160,25 @@ function generateTrendingPlaces(){
 generateTrendingPlaces();
 
 /* add scroll function to trendingSpace div */
-const previousTrendingBtn = document.getElementById('previous-trending-btn');
-const nextTrendingBtn = document.getElementById('next-trending-btn');
-const trendingItem = document.getElementById('item')
+const trendingBtns = document.querySelectorAll('.trending-btns');
+const nextTrendingBtn = document.getElementById('next');
+const previousTrendingBtn = document.getElementById('previous');
+const trendingItem = document.getElementById('item');
 
-/* Getting trendingItem width */
-const trendingItemWidth = trendingItem.clientWidth
+trendingBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    /* Getting current trendingItem width */
+    const trendingItemWidth = trendingItem.clientWidth;
 
-previousTrendingBtn.addEventListener('click', () => {
-  trendingSpace.scrollLeft -= trendingItemWidth + 40; /* Gap is 40px */
-  disableNextTrendingBtn();
-  disablePreviousTrendingBtn();
-});
-
-nextTrendingBtn.addEventListener('click', () => {
-  trendingSpace.scrollLeft += trendingItemWidth  + 40; /* Gap is 40px */
-  disableNextTrendingBtn();
-  disablePreviousTrendingBtn();
+    if(btn.id === 'next'){
+      trendingSpace.scrollLeft += trendingItemWidth  + 40; /* Gap is 40px */
+    } else if(btn.id === 'previous') {
+      trendingSpace.scrollLeft -= trendingItemWidth  + 40; /* Gap is 40px */
+    } else return;
+    
+    disableNextTrendingBtn();
+    disablePreviousTrendingBtn();
+  })
 })
 
 trendingSpace.addEventListener('wheel', (e) => {
@@ -189,16 +189,18 @@ trendingSpace.addEventListener('wheel', (e) => {
 })
 
 /* for mobile users */
-trendingSpace.addEventListener('scroll', (e) => {
+trendingSpace.addEventListener('scroll', () => {
   disableNextTrendingBtn();
   disablePreviousTrendingBtn();
 })
 
 /* disable Trending Btns */
 function disableNextTrendingBtn(){
-  const trendingSpaceCurrentWidth = trendingSpace.clientWidth;
+  /* Getting current trendingItem width */
+  const trendingItemWidth = trendingItem.clientWidth;
+  const trendingSpaceWidth = trendingSpace.clientWidth;
   if(
-    trendingInfo.length * trendingItemWidth + (trendingInfo.length - 1) * 40 - 2 <= Math.round(trendingSpace.scrollLeft + trendingSpaceCurrentWidth)
+    trendingInfo.length * trendingItemWidth + (trendingInfo.length - 1) * 40 - 2 <= Math.round(trendingSpace.scrollLeft + trendingSpaceWidth)
   ){
     nextTrendingBtn.disabled = true;
   } else{
@@ -215,17 +217,4 @@ function disablePreviousTrendingBtn() {
 }
 
 
-/* Lazy loading img */
-const lazyLoadImgs = document.querySelectorAll('.lazy-img');
-lazyLoadImgs.forEach(img => {
-  if(img.complete){
-    loaded(img);
-  } else{
-    img.addEventListener("load", loaded(img))
-  }
-})
-
-function loaded(img){
-  img.classList.add('loaded')
-}
 

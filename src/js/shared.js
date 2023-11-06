@@ -35,3 +35,17 @@ window.addEventListener('scroll', () => {
         !header.classList.contains('active') && header.classList.add('active');
     }
 })
+
+/* Lazy loading img */
+const lazyLoadImgs = document.querySelectorAll('.lazy-img');
+lazyLoadImgs.forEach(img => {
+  if(img.complete){
+    loaded(img);
+  } else{
+    img.addEventListener("load", loaded(img))
+  }
+})
+
+function loaded(img){
+  img.classList.add('loaded')
+}

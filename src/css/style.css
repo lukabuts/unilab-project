@@ -40,8 +40,9 @@ body{
 }
     /* Worls News */
 .news .world-news{
-    background:  url(../../images/worldNews.svg) center/cover no-repeat;
+    background:  url(../../images/worldNews-small.png) center/cover no-repeat;
     display: flex;
+    position: relative;
     flex: 1.5;
     align-items: center;
     justify-content: center;
@@ -52,7 +53,8 @@ body{
 .news .world-news .world-news-container,
 .news .more-news .more-news-container{
     width: 80%;
-    min-width: 300px
+    min-width: 300px;
+    z-index: 1;
 }
 
 .news .world-news .world-news-container h1{

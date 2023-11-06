@@ -254,7 +254,6 @@ footer .subscribe-div .email-div .email-inp:focus{
 }
 footer .subscribe-div .email-div img{
     position: absolute;
-    height: 16px;
     top: 12px;
     right: 19px;
     cursor: pointer;

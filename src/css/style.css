@@ -9,6 +9,7 @@ body{
     background-color: var(--body-background-color);
 }
 
+/* Shared styles */
 .title-button{
     width: 80%;
     display: flex;
@@ -457,8 +458,12 @@ body{
         flex-direction: column;
     }
 
+    .happening-section .articles .small-articles .happening-article{
+        gap: 10px;
+    }
+
     .happening-section .articles .small-articles .happening-article:nth-child(3){
-        display: block;
+        display: flex;
     }
 
     .happening-section .articles .large-articles .happening-article .title{

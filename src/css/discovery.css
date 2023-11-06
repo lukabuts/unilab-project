@@ -150,14 +150,21 @@ body{
     border-radius: 6px;
     background: transparent;
     width: 100%;
+    position: relative;
 }
 
 .container .world-news-search .search form .input-div input::-webkit-calendar-picker-indicator{
     background-image: url('../../images/dropdown.svg'); 
-    background-size: 12px 12px;
-    width: 12px;
-    height: 12px;
-    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    position: absolute;
+    background-position: calc(100% - 20px);
+    background-size: 15px;
+    cursor: pointer; 
 }
 
 .container .world-news-search .search form button{

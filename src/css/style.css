@@ -154,6 +154,7 @@ body{
 
 .trending .trending-div .item{
     background-color: #fff;
+    border-radius: 6px;
 }
 
 .trending .trending-div .item .img-div{
@@ -488,7 +489,7 @@ body{
     }
 
     .trending .trending-div .item .info{
-        padding: 10px 20px;
+        padding: 20px;
     }
 
     .trending .trending-div .item .img-div{

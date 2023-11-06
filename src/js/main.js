@@ -71,6 +71,7 @@ function generateArticles(){
 
 generateArticles();
 
+/* Show next/previous news */
 nextNewsBtn.addEventListener('click', () => {
     if(newsCount === newsInfo.length - 2) {
         nextNewsBtn.disabled = true;

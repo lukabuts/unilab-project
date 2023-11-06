@@ -269,14 +269,8 @@ footer .social-media ul{
     gap: 32px;
 }
 
-@media (max-width: 590px){
-    footer.fixedBottom{
-        position: relative;
-    }
-}
-
 /* Mobile display */
-@media (max-width: 465px) {
+@media (max-width: 490px) {
     /* Header, Footer, logo, user-img */
     header nav ul, header .logo, footer, #user-img{
         display: none;

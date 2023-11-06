@@ -3,7 +3,7 @@ const footer = document.getElementById('footer')
 
 /* Fetching data function */
 function fetchData() {
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('https://jsonplaceholder.tpicode.com/posts')
     .then(response => {
         if (!response.ok) {
             showError();

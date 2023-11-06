@@ -40,13 +40,13 @@ body {
     font-family: 'Oxanium', sans-serif;
 }
 
-.container .card .description, .special-id {
+.container .card .description,
+.container .card .special-id {
     font-family: sans-serif;
     margin-top: 25px;
 }
 
 /* Loading */
-
 .container .loading{
     position: absolute;
     top: 0;
@@ -93,7 +93,7 @@ body {
     background-color: #222222;
 }
 
-@media (max-width: 465px) {
+@media (max-width: 490px) {
     .container .error{
         position: absolute;
         top: 50%;

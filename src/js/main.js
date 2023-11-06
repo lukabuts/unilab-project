@@ -171,6 +171,9 @@ trendingBtns.forEach(btn => {
     /* Getting current trendingItem width */
     const trendingItemWidth = trendingItem.clientWidth;
 
+    /* Adding smooth scroll better UX */
+    !trendingSpace.classList.contains('smooth') && trendingSpace.classList.add('smooth');
+
     if(btn.id === 'next'){
       trendingSpace.scrollLeft += trendingItemWidth  + 40; /* Gap is 40px */
     } else if(btn.id === 'previous') {
@@ -184,6 +187,8 @@ trendingBtns.forEach(btn => {
 
 trendingSpace.addEventListener('wheel', (e) => {
   e.preventDefault();
+  /* Removing smooth scroll for faster scrolling */
+  trendingSpace.classList.contains('smooth') && trendingSpace.classList.remove('smooth');
   trendingSpace.scrollLeft += e.deltaY;
   disableNextTrendingBtn();
   disablePreviousTrendingBtn();

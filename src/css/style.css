@@ -141,8 +141,11 @@ body{
     width: 80%;
     
     overflow-x: scroll;
-    scroll-behavior: smooth;
     scrollbar-width: none;
+}
+
+.trending .trending-div.smooth{
+    scroll-behavior: smooth;
 }
 
 .trending .trending-div::-webkit-scrollbar{

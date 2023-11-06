@@ -176,11 +176,7 @@ body{
 .trending .trending-div .item .info{
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: space-around;
     gap: 10px;
-    width: 100%;
-    height: 200px;
     padding: 40px 20px;
     color: var(--description-text-color);
 }
@@ -489,6 +485,10 @@ body{
     .trending,
     .happening-section{
         padding: 40px 0;
+    }
+
+    .trending .trending-div .item .info{
+        padding: 10px 20px;
     }
 
     .trending .trending-div .item .img-div{

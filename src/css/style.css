@@ -139,10 +139,8 @@ body{
 
 .trending .trending-div{
     display: flex;
-    justify-items: center;
     gap: 40px;
     width: 80%;
-    
     overflow-x: scroll;
     scrollbar-width: none;
 }
@@ -158,6 +156,7 @@ body{
 .trending .trending-div .item{
     background-color: #fff;
     border-radius: 6px;
+    width: 360px;
 }
 
 .trending .trending-div .item .img-div{
@@ -493,6 +492,10 @@ body{
     .trending,
     .happening-section{
         padding: 40px 0;
+    }
+
+    .trending .trending-div .item{
+        width: 260px;
     }
 
     .trending .trending-div .item .info{

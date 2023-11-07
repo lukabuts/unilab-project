@@ -59,10 +59,6 @@ body{
     border-radius: 6px;
 }
 
-.container .page-title button img{
-    width: 16px;
-    height: 16px;
-}
 
 /* World news search */
 .container .world-news-search{

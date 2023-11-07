@@ -58,6 +58,11 @@
     font-size: 25px;
 }
 
+.filter-btn img{
+    width: 16px;
+    height: 16px;
+}
+
 ul{
     list-style: none;
 }

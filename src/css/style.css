@@ -66,7 +66,7 @@ body{
     margin-bottom: 40px;
 }
 
-.news .world-news .world-news-container h3{
+.news .world-news .world-news-container h2{
     font-family: var(--font-family-helvetica);
     font-size: 24px;
     font-weight: bold;

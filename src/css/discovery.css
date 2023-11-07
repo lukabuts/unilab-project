@@ -103,8 +103,9 @@ body{
     transition: 0.3s;
 }
 
-.container .world-news-search .discover-news h4{
+.container .world-news-search .discover-news p{
     color: #fff;
+    font-weight: bold;
     font-size: 16px;
     font-family: var(--font-family-helvetica);
     margin-bottom: 40px;

@@ -18,8 +18,8 @@
     <!-- header -->
     <header id="header">    
         <div class="burger-btn" id="burger-btn">
-            <button id="burger-toggle">
-              <img src="images/menu-icon.svg" alt="Menu">
+            <button id="burger-toggle" aria-label="Open Navbar">
+              <img src="images/menu-icon.svg" alt="Navbar">
             </button>
           </div>
         <div class="logo uppercase active">logo</div>
@@ -39,7 +39,7 @@
     <!-- User info -->
     <dialog id="user-info">
         <div class="user-info-div">
-            <button id="close-user-info-btn">
+            <button id="close-user-info-btn" aria-label="Close user info popup">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <p>User name: <span>Anna Smith</span></p>
@@ -54,7 +54,7 @@
             <div class="header-section">
                 <div class="logo-close-btn">
                     <div class="logo uppercase">logo</div>
-                    <button id="exitBtn">
+                    <button id="exitBtn" aria-label="Exit nav">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                 </div>
@@ -158,9 +158,9 @@
         <div class="world-news">
             <div class="world-news-container">
                 <h1 class="uppercase">world news</h1>
-                <h3>Amazing places in America to visit</h3>
+                <h2>Amazing places in America to visit</h2>
                 <p>For some reason — this country, this city, this neighborhood, this particular street — is the place you are living a majority of your life in.</p>
-                <button class="uppercase">Learn More</button>
+                <button class="uppercase" aria-label="Learn More">Learn More</button>
             </div>
             <img src="images/worldNews.png" class="lazy-img" alt="World News Image">
         </div>
@@ -170,10 +170,10 @@
                 <div class="title-button">
                     <h3 class="uppercase">more news</h3>
                     <div class="buttons">
-                        <button disabled id="previous-news-btn">
+                        <button disabled id="previous-news-btn" aria-label="Previous news">
                             <i class="fa-solid fa-angle-left"></i>
                         </button>
-                        <button id="next-news-btn">
+                        <button id="next-news-btn" aria-label="Next news">
                             <i class="fa-solid fa-angle-right"></i>
                         </button>
                     </div>
@@ -190,10 +190,10 @@
         <div class="title-button">
             <h3 class="uppercase">trending</h3>
             <div class="buttons">
-                <button disabled id="previous" class="trending-btns previous">
+                <button disabled id="previous" class="trending-btns previous" aria-label="Previous trending info">
                     <i class="fa-solid fa-angle-left"></i>
                 </button>
-                <button id="next" class="trending-btns next">
+                <button id="next" class="trending-btns next" aria-label="Next trending info">
                     <i class="fa-solid fa-angle-right"></i>
                 </button>
             </div>
@@ -208,10 +208,10 @@
         <div class="title-button">
             <h3 class="uppercase">HAPPENING NOW</h3>
             <div class="buttons">
-                <button disabled id="previous-happening-btn">
+                <button disabled id="previous-happening-btn" aria-label="Previous info">
                     <i class="fa-solid fa-angle-left"></i>
                 </button>
-                <button id="next-happening-btn">
+                <button id="next-happening-btn" aria-label="Next info">
                     <i class="fa-solid fa-angle-right"></i>
                 </button>
             </div>

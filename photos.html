@@ -19,9 +19,10 @@
     <!-- Header -->
     <header id="header">
         <div class="exit-btn">
-            <button>
-              <a href="index.html">
-                <i class="fa-solid fa-arrow-left"></i>              </a>
+            <button aria-label="Main page">
+              <a href="index.html" aria-label="Main page">
+                <i class="fa-solid fa-arrow-left"></i> 
+            </a>
             </button>
         </div>
         <div class="logo uppercase">logo</div>
@@ -35,7 +36,7 @@
             <div class="user-img-div">
                 <img src="images/user.svg" alt="user" id="user-img">
             </div>
-            <button class="filter-btn">
+            <button class="filter-btn" aria-label="filter">
                 <img src="images/filter.svg" alt="filter">
             </button>
         </nav>
@@ -44,7 +45,7 @@
     <!-- User info -->
     <dialog id="user-info">
         <div class="user-info-div">
-            <button id="close-user-info-btn">
+            <button id="close-user-info-btn" aria-label="Close user info popup">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <p>User name: <span>Anna Smith</span></p>

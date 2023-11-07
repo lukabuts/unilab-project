@@ -28,6 +28,11 @@
     gap: 10px;
 }
 
+.time img{
+    width: 16px;
+    height: 16px;
+}
+
 .time span{
     color: var(--description-text-color);
 }
@@ -102,6 +107,11 @@ header.active{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+header .burger-btn button img{
+    width: 16px;
+    height: 14px;
+}
+
 /* elements that don't appear */
 .burger-btn, .exit-btn, .filter-btn{
     display: none;
@@ -159,6 +169,8 @@ header nav .user-img-div{
 header nav .user-img-div img{
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    width: 30px;
+    height: 30px;
 }
 
 header .exit-btn button .fa-arrow-left{

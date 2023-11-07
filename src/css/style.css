@@ -410,6 +410,11 @@ body{
     gap: 4px;
 }
 
+.happening-section .articles .small-articles .happening-article .description h4{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .happening-section .articles .small-articles .happening-article .description .time a{
     text-decoration: underline;
 }

@@ -12,7 +12,7 @@ burgerBtn.addEventListener('click', function(){
 /* Close function triggers */
 exitBtn.addEventListener('click', exitNavbar);
 window.addEventListener('resize', () => {
-    if(window.innerWidth >= 465) exitNavbar();
+    if(window.innerWidth >= 490) exitNavbar();
 })
 
 mobileNavbarDialog.addEventListener('click', (e) => {

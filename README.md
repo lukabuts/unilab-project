@@ -1,2 +1,2 @@
 # Luka_Butskhrikidze
-Note: Google lihthouse-ის რეკომენდაციის გამო, ვებსაიტზე გამოვიყენე webp ფოტოები.
+Note: Google Lighthouse-ის რეკომენდაციის გამო, ვებსაიტზე გამოვიყენე webp ფოტოები.

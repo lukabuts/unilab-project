@@ -53,7 +53,7 @@ function generateArticles(){
                     <h4>${newsInfo[newsCount][0].subtitle}</h4>
                     <p>${newsInfo[newsCount][0].description}</p>
                     <div class="time">
-                        <img src="images/time.png" alt="time:">
+                        <img src="images/time.svg" alt="time:">
                         <p>2 min ago</p>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ function generateArticles(){
                     <h4>${newsInfo[newsCount][1].subtitle}</h4>
                     <p class="description">${newsInfo[newsCount][1].description}</p>
                     <div class="time">
-                        <img src="images/time.png" alt="time:">
+                        <img src="images/time.svg" alt="time:">
                         <span>2 min ago</span>
                     </div>
                 </div>
@@ -149,7 +149,7 @@ function generateTrendingPlaces(){
           <h3>${info.title}</h3>
           <p>${info.desc}</p>
           <div class="time">
-              <img src="images/time.png" alt="time:">
+              <img src="images/time.svg" alt="time:">
               <span>${info.time}</span>
           </div>
       </div>

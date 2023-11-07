@@ -192,7 +192,7 @@ trendingSpace.addEventListener('wheel', (e) => {
   trendingSpace.scrollLeft += e.deltaY;
   disableNextTrendingBtn();
   disablePreviousTrendingBtn();
-}, { passive: true })
+})
 
 /* for mobile users */
 trendingSpace.addEventListener('scroll', () => {

@@ -238,7 +238,7 @@ body{
     gap: 50px;
     padding: 30px;
     background-color: #fff;
-    flex:1;
+    flex: 1.5;
 }
 
 .mobile-navbar .header-section .logo-close-btn{
@@ -277,10 +277,10 @@ body{
 .mobile-navbar .footer-section{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 60px;
-    padding: 40px;
+    justify-content: space-around;
+    padding: 30px;
     background-color: var(--footer-background-color);
+    flex: 1;
 }
 
 .mobile-navbar .footer-section .links{

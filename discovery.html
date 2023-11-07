@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="src/css/scrollbar.css">
     <!-- header&footer -->
     <link rel="stylesheet" href="src/css/header&footer.css">
-    <!-- bootstrap icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
@@ -20,8 +20,7 @@
         <div class="exit-btn">
             <button>
               <a href="index.html">
-                <img src="images/Arrow Back.svg" alt="go back">
-              </a>
+                <i class="fa-solid fa-arrow-left"></i>              </a>
             </button>
         </div>
         <div class="logo uppercase">logo</div>
@@ -45,7 +44,7 @@
     <dialog id="user-info">
         <div class="user-info-div">
             <button id="close-user-info-btn">
-                <i class="bi bi-x-lg"></i>
+                <i class="fa-solid fa-xmark"></i>
             </button>
             <p>User name: <span>Anna Smith</span></p>
             <p>User age: <span>25</span></p>
@@ -77,11 +76,11 @@
                 <form>
                     <div class="input-div">
                         <label for="dateinput">Select a date</label>
-                        <input type="date" id="dateinput">
+                        <input type="date" id="dateinput" autocomplete="off">
                     </div>
                     <div class="input-div">
                         <label for="textinput">Enter the first keywords</label>
-                        <input type="text" id="textinput">
+                        <input type="text" id="textinput" autocapitalize="off">
                     </div>
                     <button type="submit" class="uppercase">search</button>
                 </form>
@@ -104,7 +103,7 @@
                         Nascetur himenaeos morbi gravida porta sapien justo aliquam pellentesque dapibus curae, cursus ultrices suspendisse cras ligula id aenean vulputate taciti, eleifend eros bibendum scelerisque lobortis venenatis nulla tristique tempus. Quisque eleifend vulputate.
                     </p>
                     <div class="time">
-                        <img src="images/time.svg" alt="time">
+                        <img src="images/time.png" alt="time:">
                         <span>2m ago</span>
                     </div>
             </div>
@@ -113,7 +112,7 @@
 
         <div class="elephant">
             <div class="img-div">
-                <img src="images/elephant.svg"  class="lazy-img" loading="lazy">
+                <img src="images/elephant.png"  class="lazy-img" loading="lazy" alt="Elephant">
             </div>
             <div class="description">
                 <p class="textp">
@@ -136,7 +135,7 @@
             <p>05</p>
             <p>06</p>
             <button>
-                <img src="images/more.svg" alt="more">
+                <i class="fa-solid fa-ellipsis"></i>
             </button>
         </div>
     </section>
@@ -193,32 +192,31 @@
 
         <div class="subscribe-div">
             <div class="email-div">
-                <input type="email" name="email" class="email-inp" placeholder="Email">
+                <input type="email" name="email" class="email-inp" placeholder="Email" autocomplete="email">
             <img src="images/send.svg" alt="">
             </div>
             <p>Stay in touch with us for the freshest products!</p>
         </div>
-
         <div class="social-media">
             <ul>
                 <li>
                     <a href="#">
-                        <img src="images/instagram.svg" alt="">
+                        <i class="fa-brands fa-instagram"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/twitter.svg" alt="">
+                        <i class="fa-brands fa-twitter"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/facebook.svg" alt="">
+                        <i class="fa-brands fa-facebook-f"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/web.svg" alt="">
+                        <i class="fa-solid fa-earth-americas"></i>
                     </a>
                 </li>
             </ul>

@@ -247,9 +247,8 @@ body{
     align-items: center;
 }
 
-.mobile-navbar .header-section .logo-close-btn button .bi-x-lg{
-    color: red;
-    font-size: 18px;
+.mobile-navbar .header-section .logo-close-btn button .fa-xmark{
+    color: var(--pink-text-color);
 }
 
 .mobile-navbar .header-section .links ul{

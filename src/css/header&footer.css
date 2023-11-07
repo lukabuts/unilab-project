@@ -49,6 +49,10 @@
     opacity: 1;
 }
 
+.fa-solid.fa-xmark{
+    font-size: 25px;
+}
+
 ul{
     list-style: none;
 }
@@ -98,7 +102,7 @@ header.active{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* elements that don't appear by default */
+/* elements that don't appear */
 .burger-btn, .exit-btn, .filter-btn{
     display: none;
 }
@@ -157,6 +161,10 @@ header nav .user-img-div img{
     -webkit-tap-highlight-color: transparent;
 }
 
+header .exit-btn button .fa-arrow-left{
+    font-size: 18px;
+}
+
 /* User info popup */
 #user-info{
     top: 50%;
@@ -187,7 +195,6 @@ header nav .user-img-div img{
     right: 10px;
     top: 10px;
     color: red;
-    font-size: 18px;
 }
 
 /* Styling footer */
@@ -272,6 +279,10 @@ footer .subscribe-div p{
 footer .social-media ul{
     display: flex;
     gap: 32px;
+}
+
+.social-media ul li a{
+    color: white;
 }
 
 /* Mobile display */

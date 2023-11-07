@@ -178,7 +178,7 @@ trendingBtns.forEach(btn => {
       trendingSpace.scrollLeft += trendingItemWidth  + 40; /* Gap is 40px */
     } else if(btn.id === 'previous') {
       trendingSpace.scrollLeft -= trendingItemWidth  + 40; /* Gap is 40px */
-    } else return;
+    }
     
     disableNextTrendingBtn();
     disablePreviousTrendingBtn();

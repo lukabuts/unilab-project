@@ -410,7 +410,7 @@ body{
     gap: 4px;
 }
 
-.happening-section .articles .small-articles .happening-article .description h4{
+.happening-section .articles .small-articles .happening-article .description h5{
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
 }

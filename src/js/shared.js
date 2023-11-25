@@ -2,15 +2,18 @@
 const userImg  = document.getElementById('user-img');
 const userInfo = document.getElementById('user-info');
 const closeUserInfoBtn = document.getElementById('close-user-info-btn');
+const body = document.querySelector('body')
 
 /* show User Info  */
 userImg.addEventListener('click', () => {
     userInfo.showModal();
+    body.style.overflow = 'hidden';
 })
 
 /* Hide user info */
 closeUserInfoBtn.addEventListener('click', () => {
     userInfo.close();
+    body.style.overflow = 'scroll';
 })
 
 userInfo.addEventListener('click', (e) => {
@@ -22,6 +25,7 @@ userInfo.addEventListener('click', (e) => {
         e.clientY > userInfoDimensions.bottom 
     ){
         userInfo.close();
+        body.style.overflow = 'scroll';
     }
 })
 
